@@ -1,26 +1,22 @@
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
-import { TouchableOpacity } from "react-native-gesture-handler";
+import { NavigationContainer } from "@react-navigation/native";
+import { createStackNavigator } from "@react-navigation/stack";
+import Login from "./components/pages/login";
+import Store from "./components/pages/store";
+
+const AuthStack = createStackNavigator();
 
 export default function App() {
-    const handleOnPress = () => {
-        console.log("hi");
-    };
     return (
-        <View style={styles.container}>
-            <Text>Open up App.tsx to start working on your app!</Text>
-            <TouchableOpacity onPress={handleOnPress}>
-                <Text>BUTTON</Text>
-            </TouchableOpacity>
-        </View>
+        <NavigationContainer>
+            <AuthStack.Navigator
+                screenOptions={{
+                    headerShown: false,
+                }}
+            >
+                <AuthStack.Screen name="SignIn" component={Login} />
+                <AuthStack.Screen name="Store" component={Store} />
+            </AuthStack.Navigator>
+        </NavigationContainer>
     );
 }
-
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: "#fff",
-        alignItems: "center",
-        justifyContent: "center",
-    },
-});
