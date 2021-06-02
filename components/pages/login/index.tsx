@@ -5,6 +5,8 @@ import {
 import React, { useState } from "react";
 import { Image, View, StyleSheet, TextInput, Text } from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
+import MainLogo from "../../svgs/MainLogo";
+import TextLogo from "../../svgs/TextLogo";
 
 type LoginScreenNavigationProp = StackNavigationProp<any, "Login">;
 export interface LoginPageProps {
@@ -28,12 +30,9 @@ const LoginPage: React.FunctionComponent<LoginPageProps> = ({ navigation }) => {
     };
     return (
         <View style={styles.container}>
-            <Image
-                source={{
-                    uri: "https://cdn11.bigcommerce.com/s-3rntvoamki/images/stencil/original/elegante_virgule_final_droite_331x100_1578262781__83329.original.jpg",
-                }}
-                style={styles.image}
-            />
+            <MainLogo style={styles.logo} />
+            <TextLogo style={styles.textLogo} />
+
             <Text style={styles.title}>Login to your Account</Text>
             <TextInput
                 textContentType="emailAddress"
@@ -80,9 +79,14 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         padding: 20,
     },
-    image: {
+    logo: {
         marginTop: 110,
-        marginBottom: 60,
+
+        width: 340,
+        height: 100,
+    },
+    textLogo: {
+        marginBottom: 30,
         width: 340,
         height: 100,
     },

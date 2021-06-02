@@ -1,13 +1,12 @@
 {
-  "name": "EleganteVirgule",
-  "displayName": "EleganteVirgule",
-  "expo": {
     "name": "EleganteVirgule",
-    "slug": "EleganteVirgule",
-    "version": "1.0.0",
-    "assetBundlePatterns": [
-      "**/*"
-    ],
-    "description": ""
-  }
+    "displayName": "EleganteVirgule",
+    "expo": {
+        "name": "EleganteVirgule",
+        "slug": "EleganteVirgule",
+        "version": "1.0.0",
+        "orientation": "portrait",
+        "assetBundlePatterns": ["**/*"],
+        "description": ""
+    }
 }
